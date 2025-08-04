@@ -1,0 +1,200 @@
+/* ========================================
+🌍 GENERAL STYLES
+======================================== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f8fb;
+  color: #222;
+}
+
+h1, h2, h3 {
+  margin: 0 0 1rem;
+  color: #116600;
+}
+
+a {
+  color: #004faa;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+🌐 HEADER
+======================================== */
+.app-header {
+  background: #003366;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.motto {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #cde3fa;
+}
+
+/* ========================================
+📋 LOGIN SCREEN & FORMS
+======================================== */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 2rem;
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+.centered {
+  text-align: center;
+}
+
+.login-options button {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  background: #004080;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-options button:hover {
+  background: #0057b7;
+}
+
+form label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+button[type="submit"] {
+  background: #006699;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0088cc;
+}
+
+/* ========================================
+📊 DASHBOARD LAYOUT
+======================================== */
+main#dashboard {
+  display: flex;
+  height: calc(100vh - 120px);
+}
+
+/* 📁 Sidebar menu */
+#sidebar {
+  width: 230px;
+  background: #002244;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#sidebar ul li {
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+#sidebar ul li:hover {
+  background: #003366;
+}
+
+/* 🖥 Dashboard content */
+#dashboard-content {
+  flex: 1;
+  padding: 2rem;
+  background: #f9fcff;
+  overflow-y: auto;
+}
+
+/* ========================================
+🔔 NOTIFICATION PANEL
+======================================== */
+#notification-panel {
+  background: #ffffff;
+  border-top: 2px solid #004080;
+  padding: 1.5rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+#notification-panel h3 {
+  color: #004080;
+}
+
+#notifications-list {
+  list-style: none;
+  padding: 0;
+}
+
+#notifications-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Message box */
+#messageForm textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  margin-bottom: 1rem;
+}
+
+/* ========================================
+📱 RESPONSIVENESS
+======================================== */
+@media (max-width: 768px) {
+  main#dashboard {
+    flex-direction: column;
+  }
+
+  #sidebar {
+    width: 100%;
+  }
+
+  #dashboard-content {
+    padding: 1rem;
+  }
+
+  .card {
+    margin: 1rem;
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SchooLink | Empowering Schools Beyond the Grid</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- 🌍 Global Header -->
+  <header class="app-header">
+    <h1>🎓 SchooLink</h1>
+    <p class="motto">Empowering Schools Beyond the Grid</p>
+  </header>
+
+  <!-- 🧭 Login Navigation -->
+  <section id="login-screen" class="card centered">
+    <h2>Select Your Portal</h2>
+    <div class="login-options">
+      <button onclick="showLogin('admin')">🛡 Admin Login</button>
+      <button onclick="showLogin('teacher')">📘 Teacher Login</button>
+      <button onclick="showLogin('parent')">👨‍👩‍👧 Parent Login</button>
+    </div>
+  </section>
+
+  <!-- 🔐 Login Forms -->
+  <section id="login-forms" style="display: none;" class="card centered">
+    <h2 id="login-title"></h2>
+    <form id="loginForm">
+      <label>Username: <input type="text" id="username" required /></label>
+      <label>Password: <input type="password" id="password" required /></label>
+      <button type="submit">🔓 Login</button>
+      <p><a href="#" onclick="backToMain()">⬅ Back</a></p>
+    </form>
+  </section>
+
+  <!-- 📊 DASHBOARDS (hidden by default) -->
+  <main id="dashboard" style="display: none;">
+    <!-- 📁 Sidebar Navigation -->
+    <nav id="sidebar">
+      <ul id="sidebar-menu">
+        <!-- Populated by JS depending on user role -->
+      </ul>
+    </nav>
+
+    <!-- 🖥 Dashboard Content -->
+    <section id="dashboard-content">
+      <h2>Welcome to SchooLink Dashboard</h2>
+      <div id="dynamic-content">
+        <!-- Sections like attendance, results, etc., will be injected here -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ✉️ Notification + Message Panel (visible to parents/admin) -->
+  <section id="notification-panel" style="display: none;">
+    <h3>🔔 Notifications</h3>
+    <ul id="notifications-list">
+      <li>No new notifications.</li>
+    </ul>
+    <h3>📨 Message Admin</h3>
+    <form id="messageForm">
+      <textarea id="parentMessage" rows="4" placeholder="Write your message..."></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <!-- HTML Part: Add this where appropriate in your parent dashboard -->
+    <div id="messageSenderSection">
+      <h3>📩 Send a Message to Admin</h3>
+      <form id="messageForm">
+        <label for="parentMessage">Your Message:</label><br />
+        <textarea id="parentMessage" rows="4" style="width: 100%;" required></textarea><br /><br />
+        <button type="submit">📤 Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 🦶 Footer -->
+  <footer>
+    <p>&copy; 2025 SchooLink | All rights reserved</p>
+  </footer>
+</body>
+</html>
